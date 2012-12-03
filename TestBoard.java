@@ -3,7 +3,9 @@ public class TestBoard {
 		Board board = new Board();
 		//Constants constant = new Constants();
 		board.fill(Constants.ZERO);//Constants.ZERO);
-		board.print();
 
+		board.setPoint(5,3,' ');
+
+		board.print();
 	}
 }
