@@ -1,5 +1,5 @@
 interface Constants { // not sure what an interface is, but hey
-	public final static char ZERO = '@';
+	public final static char ZERO = ' ';
 	public final static char PLAYER = 'P';
 	public final static char BLOCK = 'B';
 	public final static char SHADOW = 'S';
