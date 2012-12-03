@@ -11,13 +11,22 @@ public class Board {
 
 	public void setPoint(int x, int y, char charToSet) {
 		theBoard[x][y] = charToSet;
+		System.out.println("Point ("+x+","+y+") set to '"+charToSet+"'");
 	}
 
 	public char getPoint(int x, int y) {
 		return theBoard[x][y];
 	}
 
+	public void blank() {
+		String newlines = new String();
+		for (int i = 0; i < (Constants.HEIGHT + 5); i++){
+			newlines = newlines + "\n";
+		}
+		System.out.print(newlines);
+	}
 	public void print() {
+		blank();
 		String currentRow = new String();
 		System.out.print(Padding(Constants.PADDING)+Constants.CORNER);
 		for (int i = 0; i < Constants.WIDTH; i++) {
