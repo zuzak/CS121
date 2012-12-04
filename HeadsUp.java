@@ -2,10 +2,11 @@ public class HeadsUp {
 	static String HUD[] = new String[Constants.HEIGHT];
 
 	static public void init(){ 
+	for (int i = 0; i < Constants.HEIGHT; i++) {
+			set(i,"");
+		}
 		set(0,Constants.MSG_GAMENAME);
 		set(1,Constants.MSG_GAMESUBTITLE);
-		set(2,"");
-		set(3,"");
 	}
 	static public String get(int index){
 		return HUD[index];
