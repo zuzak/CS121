@@ -1,6 +1,9 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class Game {
 	public static Board board = new Board();
+	public static int level = 1;
+	public static ArrayList<Block> blocks = new ArrayList<Block>();
 	public static void main(String args[]){
 		//public Board board = new Board();
 		//Constants constant = new Constants();
@@ -37,11 +40,16 @@ public class Game {
 			} catch(ArrayIndexOutOfBoundsException e) {
 				HeadsUp.set(Constants.HEIGHT-1,Constants.MSG_ERRMOVE);
 			}
-			Block foo = new Block();
-			foo.Block();
-			board.blank();
+			blocks.add(new Block());
+			for(Block i : blocks) {
+				i.age();
+			}
+		//	board.blank();
 			board.print();
 			HeadsUp.set(Constants.HEIGHT-1,"");
 		}
+	}
+	public static int getLevel() {
+		return level;
 	}
 }
