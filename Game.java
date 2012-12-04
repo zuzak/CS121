@@ -16,11 +16,11 @@ public class Game {
 			try {
 				switch (input.next().charAt(0)) {
 					case 'h':
-						player.move(0,-1);  //  |y
-						break;             //   |  
-					case 'j':             //    +--- x
-						player.move(-1,0); // -1 0 up
-						break;        // 1 0 down
+						player.move(0,-1);
+						break;             
+					case 'j':         
+						player.move(-1,0); 
+						break;      
 					case 'k':
 						player.move(1,0);
 						break;
