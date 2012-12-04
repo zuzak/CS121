@@ -11,4 +11,16 @@ interface Constants { // not sure what an interface is, but hey
 	public final static int  PADDING      = 3;
 	public final static char PADDINGCHAR  = ' ';
 	public final static int  MAXLENGTH    = 74;
+	public final static int  SHADOWTIME    = 3;
+	// i18n
+	
+	public final static String MSG_SELECTOPTION = "Please select an option: ";
+	public final static String MSG_QUITTING = "Quitting...";
+	public final static String MSG_INVALIDMOVE = "Invalid move.";
+	public final static String MSG_ERRMOVE = "Invalid move.";
+	
+	public final static String MSG_MOVECOUNTER = "Moves: ";
+
+	public final static String MSG_GAMENAME = "BlockAttack";
+	public final static String MSG_GAMESUBTITLE = "Avoid the blocks!";
 }

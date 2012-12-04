@@ -11,7 +11,6 @@ public class Board {
 
 	public void setPoint(int x, int y, char charToSet) {
 		theBoard[x][y] = charToSet;
-		System.out.println("Point ("+x+","+y+") set to '"+charToSet+"'");
 	}
 
 	public char getPoint(int x, int y) {

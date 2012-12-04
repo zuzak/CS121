@@ -8,8 +8,11 @@ public class Game {
 		HeadsUp.init();
 		board.print();
 		Player player = new Player();
+		player.redraw();
 		Scanner input = new Scanner(System.in);
-		while (true) {
+		boolean playing = true;
+		while (playing) {
+			System.out.print(Constants.MSG_SELECTOPTION);
 			try {
 				switch (input.next().charAt(0)) {
 					case 'h':
@@ -24,12 +27,18 @@ public class Game {
 					case 'l':
 						player.move(0,1);
 						break;
+					case 'q':
+						playing = false;
+						HeadsUp.set(Constants.HEIGHT-1,Constants.MSG_QUITTING);
+						break;
 					default:
-						HeadsUp.set(Constants.HEIGHT-1,"Invalid move!");
+						HeadsUp.set(Constants.HEIGHT-1,Constants.MSG_INVALIDMOVE);
 				}
 			} catch(ArrayIndexOutOfBoundsException e) {
-				HeadsUp.set(Constants.HEIGHT-1,"Disallowed move!");
+				HeadsUp.set(Constants.HEIGHT-1,Constants.MSG_ERRMOVE);
 			}
+			Block foo = new Block();
+			foo.Block();
 			board.blank();
 			board.print();
 			HeadsUp.set(Constants.HEIGHT-1,"");
