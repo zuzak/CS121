@@ -31,6 +31,9 @@ public class Player {
 	public int moveCount() {
 		return moveCount;
 	}
+	public void resetMoves() {
+		moveCount = 0;
+	}
 	public void redraw(){
 		Game.board.setPoint(xcoord,ycoord,Constants.PLAYER);
 	}

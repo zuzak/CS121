@@ -2,10 +2,10 @@ import java.util.Random;
 public class Block {
 	int xcoord = -1;
 	int ycoord = -1;
-	int lifetime;// = (0 - Constants.SHADOWTIME);
+	int lifetime;  
 	Random rand = new Random();
 	void Block() {
-		lifetime = -4; //(0 - Constants.SHADOWTIME);
+		lifetime = -3;
 //		while (Game.board.getPoint(xcoord, ycoord) != Constants.ZERO) {
 			xcoord = rand.nextInt(Constants.WIDTH);
 			ycoord = rand.nextInt(Constants.HEIGHT);

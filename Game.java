@@ -4,7 +4,7 @@ public class Game {
 	public static Board board = new Board();
 	public static int level = 1;
 	public static ArrayList<Block> blocks = new ArrayList<Block>();
-	public static void main(String args[]){
+	public static void Begin(){
 		/* INITIALISE */
 		board.fill(Constants.ZERO);
 		HeadsUp.init();
@@ -50,7 +50,8 @@ public class Game {
 			} else if (player.moveCount() == Constants.LEVELGOAL) {
 				HeadsUp.set(8,Constants.MSG_LEVELCOMPLETE);
 				level++;
-				if (level == Constants.LEVELLIFE.length){
+				player.resetMoves();
+				if (level == (Constants.LEVELLIFE.length)+1){
 					HeadsUp.set(9,Constants.MSG_GAMEOVER);
 					HeadsUp.set(10,Constants.MSG_WINNER);
 					playing = false;
