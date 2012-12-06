@@ -5,9 +5,8 @@ public class Game {
 	public static int level = 1;
 	public static ArrayList<Block> blocks = new ArrayList<Block>();
 	public static void main(String args[]){
-		//public Board board = new Board();
-		//Constants constant = new Constants();
-		board.fill(Constants.ZERO);//Constants.ZERO);
+		/* INITIALISE */
+		board.fill(Constants.ZERO);
 		HeadsUp.init();
 		board.print();
 		Player player = new Player();
@@ -44,9 +43,24 @@ public class Game {
 			for(Block i : blocks) {
 				i.age();
 			}
-		//	board.blank();
-			board.print();
 			HeadsUp.set(Constants.HEIGHT-1,"");
+			if (Player.getStrength() == 0){
+				HeadsUp.set(8,Constants.MSG_GAMEOVER);
+				playing = false;
+			} else if (player.moveCount() == Constants.LEVELGOAL) {
+				HeadsUp.set(8,Constants.MSG_LEVELCOMPLETE);
+				level++;
+				if (level == Constants.LEVELLIFE.length){
+					HeadsUp.set(9,Constants.MSG_GAMEOVER);
+					HeadsUp.set(10,Constants.MSG_WINNER);
+					playing = false;
+				}
+			} else {
+				HeadsUp.set(8,Constants.MSG_LEVEL+level);
+			}
+			
+
+			board.print();
 		}
 	}
 	public static int getLevel() {
