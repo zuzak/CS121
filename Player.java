@@ -5,11 +5,12 @@ public class Player {
 	static int lives = Constants.INITIALSTRENGTH;// = Constants.INITIALSTRENGTH;
 
 	public void move(int xoffset, int yoffset) {
+		// checking if the mmove is within the boundary
 		if (((xcoord + xoffset) <= (Constants.WIDTH)) && ((ycoord + yoffset) <= (Constants.HEIGHT-1)) && ((xcoord + xoffset) >= 0) && ((ycoord + yoffset) >= 0)){
 			int newx = xcoord + xoffset;
 			int newy = ycoord + yoffset;
 			if (Game.board.getPoint(newx,newy) == Constants.BLOCK) {
-				Strength(-1);
+				Strength(-1); // player moved into a block, tut tut
 			} else {
 				Game.board.setPoint(xcoord,ycoord,Constants.ZERO);
 				xcoord = newx;

@@ -18,15 +18,19 @@ public class Game {
 			try {
 				switch (input.next().charAt(0)) {
 					case 'h':
+					case 'a':
 						player.move(0,-1);
 						break;             
-					case 'j':         
+					case 'j':
+					case 'w':
 						player.move(-1,0); 
 						break;      
 					case 'k':
+					case 's':
 						player.move(1,0);
 						break;
 					case 'l':
+					case 'd':
 						player.move(0,1);
 						break;
 					case 'q':
