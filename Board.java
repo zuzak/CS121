@@ -17,14 +17,14 @@ public class Board {
 		return theBoard[x][y];
 	}
 
-	public void blank() {
+	public void blank() { // spam new lines in a bid to "refresh" the page
 		String newlines = new String();
 		for (int i = 0; i < (Constants.HEIGHT + 5); i++){
 			newlines = newlines + "\n";
 		}
 		System.out.print(newlines);
 	}
-	public void print() {
+	public void print() { // board to console
 		blank();
 		String currentRow = new String();
 		System.out.print(Padding(Constants.PADDING)+Constants.CORNER);
@@ -47,7 +47,7 @@ public class Board {
 		System.out.print(Constants.CORNER+"\n");
 	}
 
-	public String Padding(int padding) {
+	public String Padding(int padding) { // for formatting
 		String padstr = new String();
 		for (int i = 0; i < padding; i++) {
 			padstr = padstr + Constants.PADDINGCHAR;
