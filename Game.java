@@ -56,7 +56,7 @@ public class Game {
 				HeadsUp.set(8,Constants.MSG_LEVELCOMPLETE);
 				level++;
 				player.resetMoves();
-				if (level == (Constants.LEVELLIFE.length)+1){ // no levels left!
+				if (level == (Constants.LEVELLIFE.length)){ // no levels left!
 					HeadsUp.set(9,Constants.MSG_GAMEOVER);
 					HeadsUp.set(10,Constants.MSG_WINNER);
 					playing = false;

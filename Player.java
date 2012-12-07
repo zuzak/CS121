@@ -6,7 +6,7 @@ public class Player {
 
 	public void move(int xoffset, int yoffset) {
 		// checking if the mmove is within the boundary
-		if (((xcoord + xoffset) <= (Constants.WIDTH)) && ((ycoord + yoffset) <= (Constants.HEIGHT-1)) && ((xcoord + xoffset) >= 0) && ((ycoord + yoffset) >= 0)){
+		if (((xcoord + xoffset) < (Constants.WIDTH)) && ((ycoord + yoffset) <= (Constants.HEIGHT-1)) && ((xcoord + xoffset) >= 0) && ((ycoord + yoffset) >= 0)){
 			int newx = xcoord + xoffset;
 			int newy = ycoord + yoffset;
 			if (Game.board.getPoint(newx,newy) == Constants.BLOCK) {

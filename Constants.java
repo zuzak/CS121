@@ -23,7 +23,7 @@ interface Constants { // not sure what an interface is, but hey
 	public final static int    HEIGHT               = 12; // height of board
 	public final static int    INITIALSTRENGTH      = 3; // lives the player starts with
 	public final static int    LEVELGOAL            = 200; // points player must reach to continue
-	public final static int    LEVELLIFE[]          = {66, 88, 110}; // blocks' lifespan
+	public final static int    LEVELLIFE[]          = {0, 66, 88, 110}; // blocks' lifespan
 	public final static int    LEVELMAX             = 3; // number of levels at which the game ends
 	public final static int    PADDING              = 3; // padding each side of board
 	public final static int    SHADOWTIME           = -2; // shadows turn to blocks at 0
