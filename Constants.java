@@ -17,7 +17,7 @@ interface Constants { // not sure what an interface is, but hey
 	public final static char   BORDERY              = '|'; // vertical border of board
 	public final static char   CORNER               = '+'; // corners of board
 	public final static char   PADDINGCHAR          = ' '; // char used to pad
-	public final static char   PLAYER               = '@'; // the player character
+	public final static char   PLAYER               = 'P'; // the player character
 	public final static char   SHADOW               = 'S'; // a block's shadow
 	public final static char   ZERO                 = ' '; // a blank space
 	public final static int    HEIGHT               = 12; // height of board
