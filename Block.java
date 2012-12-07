@@ -6,28 +6,24 @@ public class Block {
 	Random rand = new Random();
 	void Block() {
 		lifetime = -3;
-//		while (Game.board.getPoint(xcoord, ycoord) != Constants.ZERO) {
-			xcoord = rand.nextInt(Constants.WIDTH);
-			ycoord = rand.nextInt(Constants.HEIGHT);
-//		}
+		xcoord = rand.nextInt(Constants.WIDTH);
+		ycoord = rand.nextInt(Constants.HEIGHT);
 		Game.board.setPoint(xcoord,ycoord,Constants.SHADOW);
 		age();
 	}
 	public void age() {
-		if (xcoord == -1) { // double check, just in case
+		if (xcoord == -1) { // double check, just in case [if not on board...]
 			Block();
 		}
-		lifetime++;
-		if (lifetime == 0) {
+		lifetime++; // block gets older
+		if (lifetime == 0) { // gestation period over
 			if (Game.board.getPoint(xcoord,ycoord) == Constants.PLAYER){
-				Player.Strength(-1);
+				Player.Strength(-1); // if player on top of shadow
 			} else {
 				Game.board.setPoint(xcoord,ycoord,Constants.BLOCK);
 			}
-		} else if (lifetime == Constants.LEVELLIFE[Game.getLevel()]) {
+		} else if (lifetime == Constants.LEVELLIFE[Game.getLevel()]) { // die of old age
 			Game.board.setPoint(xcoord, ycoord, Constants.ZERO);
-		} else {
-//			Game.board.setPoint(xcoord, ycoord, Constants.SHADOW);
 		}
 	}
 }
